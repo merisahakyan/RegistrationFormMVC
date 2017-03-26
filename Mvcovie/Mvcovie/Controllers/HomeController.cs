@@ -26,7 +26,6 @@ namespace Mvcovie.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Registration([Bind(Include = "Name,Surname,eMail,Password")] User user)
         {
             if (ModelState.IsValid)

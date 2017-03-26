@@ -19,10 +19,21 @@ namespace Mvcovie.Controllers
             ViewBag.user = user;
             return View();
         }
-        public ActionResult Registration(User user)
+
+
+        public ActionResult Registration()
         {
-            ViewBag.user = user;
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Registration([Bind(Include = "Name,Surname,eMail,Password")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Welcome");
+            }
+            return View(user);
         }
     }
 }

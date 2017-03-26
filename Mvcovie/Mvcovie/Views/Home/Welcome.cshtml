@@ -3,7 +3,24 @@
     ViewBag.Title = "Welcome";
 }
 
-<p>Welcome to our website dear @ViewBag.user.Name! of type @ViewBag.user.Gender</p>
+<p>Welcome to our website dear @ViewBag.user.Name! </p>
+
+<table>
+    <caption align="left">User Information</caption>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>eMail</th>
+        <th>Gender</th>
+    </tr>
+   
+    <tr>
+        <td>@ViewBag.user.Name</td>
+        <td>@ViewBag.user.Surname</td>
+        <td>@ViewBag.user.eMail</td>
+        <td>@ViewBag.user.Gender</td>
+    </tr>
+</table>
 @using (Html.BeginForm("Index", "Home"))
 {
     <input type="submit" value="Back To Home Page" />

@@ -1,0 +1,26 @@
+﻿@using Mvcovie.Models
+@model User
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+
+@using (Html.BeginForm("Welcome", "Home"))
+{
+    @Html.Label("Name");<br />
+    @Html.TextBox("Name");<br />
+    @Html.Label("Surname");<br />
+    @Html.TextBox("Surname");<br />
+    @Html.Label("eMail");<br />
+    @Html.TextBox("eMail");<br />
+    @Html.Label("Password");<br />
+    @Html.TextBox("Password");<br />
+    @Html.Label("Confirm Password");<br />
+    @Html.TextBox("Password1");<br />
+    @Html.Label("Gender");<br />
+    @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof(Gender))),
+                    new { @class = "form-control" })
+    <input type="submit" value="Register" />
+}
+

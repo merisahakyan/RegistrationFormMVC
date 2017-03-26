@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<p>Welcome to our website dear @ViewBag.user.Name! of type @ViewBag.user.Gender</p>
+@using (Html.BeginForm("Index", "Home"))
+{
+    <input type="submit" value="Back To Home Page" />
+}

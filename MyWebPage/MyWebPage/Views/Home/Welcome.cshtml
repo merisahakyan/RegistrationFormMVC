@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+
+<h2>Welcome dear @ViewBag.user.Name!</h2>
+<p>
+    Your account <br />
+    Name:@ViewBag.user.Name<br />
+    Surname:@ViewBag.user.Surname<br />
+    eMail:@ViewBag.user.eMail <br />
+    Password:@ViewBag.user.Password<br />
+</p>
+@using (Html.BeginForm("Index", "Home"))
+{
+    <input type="submit" value="Back to Home" />
+}
+
+
